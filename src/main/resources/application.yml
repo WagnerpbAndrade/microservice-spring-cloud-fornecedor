@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: Microservice Fornecedor
+    name: 'fornecedor'
   datasource:
     url: jdbc:mysql://localhost:3306/fornecedor?createDatabaseIfNotExist=true
     username: root
@@ -13,3 +13,9 @@ spring:
     hibernate:
       ddl-auto: update
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
